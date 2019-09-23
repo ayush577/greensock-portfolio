@@ -80,6 +80,30 @@
 
   & ul {
     list-style: none;
+
+    li {
+      color: $white;
+      a {
+        color: $white;
+        text-decoration: none;
+        font-family: $font-family;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+      }
+    }
+
+    .other-page {
+
+      transition: all 0.5s;
+    
+    }
+
+    .other-page:hover {
+
+      transform: scale(1.2) !important;
+
+    }
   }
 
   .title {
