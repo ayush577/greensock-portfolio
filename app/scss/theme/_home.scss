@@ -94,15 +94,11 @@
     }
 
     .other-page {
-
       transition: all 0.5s;
-    
     }
 
     .other-page:hover {
-
       transform: scale(1.2) !important;
-
     }
   }
 
@@ -120,8 +116,8 @@
 .product {
   position: absolute;
   top: 50%;
-  left: 51%;
-  transform: translate(-50%, -50%);
+  left: 52%;
+  transform: translate(-50%, -52%);
   animation: fly 4s ease-in-out infinite;
   margin: 0 auto;
 
@@ -157,7 +153,7 @@
 .left-sidebar {
   left: 60px;
   position: absolute;
-  top: 46%;
+  top: 50%;
   transform: translateY(-50%);
   text-align: left;
   width: 26%;
@@ -167,16 +163,19 @@
     font-weight: 600;
   }
 
+  .year-title {
+    color: $background-color2;
+  }
+
   .btn {
     padding: 24px 48px;
-    background: $background-color;
+    background: $background-color2;
     color: $white;
     outline: none;
     border: none;
     margin: 1em 0;
     font-family: $font-family;
     font-weight: bolder;
-    letter-spacing: 4px;
   }
 
   p {
@@ -202,6 +201,11 @@
 
     li {
       display: inline-block;
+
+      a{
+        color: $white;
+      }
+
     }
 
     li:not(:last-child) {
