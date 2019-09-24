@@ -10,6 +10,10 @@
   position: absolute;
   height: 100%;
   width: 50%;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
 }
 
 .left {
@@ -32,7 +36,15 @@
   .next {
     line-height: 80px;
     position: absolute;
+    
     padding: 10px;
+
+    @include media-breakpoint-down(sm){
+
+      line-height: 30px;
+
+    }
+
   }
 
   .watch,
@@ -41,10 +53,17 @@
     position: absolute;
     padding: 10px;
     right: 0;
+
+    @include media-breakpoint-down(sm){
+
+      line-height: 30px;
+
+    }
+
   }
 
   .logo {
-    padding: 10px 80px 10px 60px;
+    padding: 10px 52px 10px 52px;
     background: $background-color;
     color: $white;
     letter-spacing: 1px;
@@ -57,7 +76,7 @@
 
   .watch {
     right: 220px;
-    font-family: helvetica;
+    font-family: $font-family;
     color: $white;
     text-transform: uppercase;
     font-weight: 400;
@@ -71,9 +90,9 @@
 }
 
 .right-sidebar {
-  right: 80px;
+  right: 25px;
   position: absolute;
-  top: 45%;
+  top: 56%;
   transform: translateY(-50%);
   text-align: right;
   color: $white;
@@ -125,6 +144,16 @@
     width: 70%;
     margin: 0 auto;
   }
+
+  @include media-breakpoint-down(sm) {
+    top: 25%;
+    left: 54%;
+    transform: translate(-25%, -52%);
+
+    img {
+      width: 18rem;
+    }
+  }
 }
 
 @include keyframes(fly) {
@@ -148,15 +177,116 @@
   color: $primary-color;
   text-transform: uppercase;
   font-size: 12px;
+
+  @include media-breakpoint-down(sm) {
+    p {
+      display: none;
+    }
+  }
 }
 
 .left-sidebar {
-  left: 60px;
+  left: 24px;
   position: absolute;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
   text-align: left;
   width: 26%;
+
+  .desc {
+    display: none;
+  }
+
+  .desc-1 {
+    display: block;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .desc {
+      display: block;
+    }
+
+    .desc-1 {
+      display: none;
+    }
+  }
+
+  .single-input {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    border: none;
+    outline: none;
+    background: #eeeef0;
+    padding: 0 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .form-select {
+    height: 40px;
+    width: 100%;
+    .nice-select {
+      border: none;
+      border-radius: 0px;
+      height: 40px;
+      background: #eeeef0;
+      padding-left: 45px;
+      padding-right: 40px;
+      width: 100%;
+      .list {
+        margin-top: 0;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        width: 100%;
+        padding: 10px 0 10px 0px;
+        .option {
+          font-weight: 300;
+          @include transition();
+          line-height: 28px;
+          min-height: 28px;
+          font-size: 15px;
+          padding-left: 45px;
+          &.selected {
+            color: $primary;
+            background: transparent;
+          }
+          &:hover {
+            color: $primary;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .button-group-area {
+    padding: 15px 30px;
+    color: white;
+    background-color: #9b4d38;
+
+    a {
+      color: $white;
+      text-decoration: $white;
+    }
+  }
+
+  .single-textarea {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    border: none;
+    outline: none;
+    background: #eeeef0;
+    padding: 0 20px;
+    height: 100px;
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+  }
 
   .product-title {
     font-family: $font-family;
@@ -176,6 +306,11 @@
     margin: 1em 0;
     font-family: $font-family;
     font-weight: bolder;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 65px;
+      padding: 15px 30px;
+    }
   }
 
   p {
@@ -196,22 +331,24 @@
   right: 60px;
   color: $white;
 
+  @include media-breakpoint-down(sm) {
+    bottom: 30px;
+    right: 30px;
+  }
+
   ul {
     list-style: none;
 
     li {
       display: inline-block;
 
-      a{
+      a {
         color: $white;
       }
-
     }
 
     li:not(:last-child) {
       padding-right: 40px;
     }
-
   }
-  
 }

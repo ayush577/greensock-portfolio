@@ -3,6 +3,7 @@
 
 $black:#000000;
 $white:#ffffff;
+$primary: #9b4d38;
 $background-color: #9b4d38;
 $background-color2: #378891;
 $primary-color: #808080;
@@ -25,3 +26,49 @@ $font-family: 'Lato', sans-serif;
       @content;
   }
 }
+
+
+@mixin transition($args: all 0.3s ease 0s) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+         -o-transition: $args;
+            transition: $args;
+  }
+
+  /* Medium Layout: 1280px */
+@mixin medium {
+    @media (min-width: 992px) and (max-width: 1400px) {
+      @content;
+    }
+  }
+  
+  /* Tablet Layout: 768px */
+  @mixin tablet {
+    @media (min-width: 768px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+  /* Mobile Layout: 320px */
+  @mixin mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  /* Wide Mobile Layout: 480px */
+  @mixin wide-mobile {
+    @media (min-width: 480px) and (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  
+  @mixin cmq ($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+  
+
+  
