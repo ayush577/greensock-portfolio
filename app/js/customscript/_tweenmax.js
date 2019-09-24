@@ -41,6 +41,13 @@ TweenMax.from(".product-title", 2, {
    ease: Expo.easeInOut
 });
 
+TweenMax.from(".year-title", 2, {
+   delay: 1.6,
+   opacity: 0,
+   y: 20,
+   ease: Expo.easeInOut
+});
+
 TweenMax.from(".desc", 2, {
    delay: 1.8,
    opacity: 0,
