@@ -188,7 +188,7 @@
 .left-sidebar {
   left: 24px;
   position: absolute;
-  top: 65%;
+  top: 50%;
   transform: translateY(-50%);
   text-align: left;
   width: 26%;
@@ -209,6 +209,17 @@
     .desc-1 {
       display: none;
     }
+  }
+
+
+  .product-title{
+
+    @include media-breakpoint-down(sm){
+
+      font-size: 1.4em;
+
+    }
+
   }
 
   .single-input {
