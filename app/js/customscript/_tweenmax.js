@@ -69,6 +69,13 @@ TweenMax.from(".desc-1", 2, {
   ease: Expo.easeInOut
 });
 
+TweenMax.from(".desc-2", 2, {
+  delay: 1.8,
+  opacity: 0,
+  y: 20,
+  ease: Expo.easeInOut
+});
+
 TweenMax.from("#price", 2, {
   delay: 2,
   opacity: 0,

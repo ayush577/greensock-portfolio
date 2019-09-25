@@ -3,6 +3,11 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .left,
@@ -12,7 +17,7 @@
   width: 50%;
 
   @include media-breakpoint-down(sm) {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -36,15 +41,12 @@
   .next {
     line-height: 80px;
     position: absolute;
-    
+
     padding: 10px;
 
-    @include media-breakpoint-down(sm){
-
+    @include media-breakpoint-down(sm) {
       line-height: 30px;
-
     }
-
   }
 
   .watch,
@@ -54,12 +56,9 @@
     padding: 10px;
     right: 0;
 
-    @include media-breakpoint-down(sm){
-
+    @include media-breakpoint-down(sm) {
       line-height: 30px;
-
     }
-
   }
 
   .logo {
@@ -75,7 +74,7 @@
   }
 
   .watch {
-    right: 220px;
+    right: 40px;
     font-family: $font-family;
     color: $white;
     text-transform: uppercase;
@@ -84,7 +83,7 @@
   }
 
   .cart {
-    right: 70px;
+    right: 8px;
     color: $white;
   }
 }
@@ -125,6 +124,11 @@
     font-size: 36px;
     font-family: $font-family;
     padding-bottom: 40px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
   }
 
   & li:not(:first-child) {
@@ -188,38 +192,23 @@
 .left-sidebar {
   left: 24px;
   position: absolute;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
   text-align: left;
-  width: 26%;
-
-  .desc {
-    display: none;
-  }
+  width: 35%;
 
   .desc-1 {
     display: block;
   }
 
-  @include media-breakpoint-down(sm) {
-    .desc {
-      display: block;
-    }
-
-    .desc-1 {
-      display: none;
-    }
+  .desc-2 {
+    font-size: 10px;
   }
 
-
-  .product-title{
-
-    @include media-breakpoint-down(sm){
-
+  .product-title {
+    @include media-breakpoint-down(sm) {
       font-size: 1.4em;
-
     }
-
   }
 
   .single-input {
@@ -306,6 +295,10 @@
 
   .year-title {
     color: $background-color2;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
   }
 
   .btn {
@@ -329,6 +322,11 @@
     font-weight: lighter;
     line-height: 24px;
     color: $primary-color;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 15px;
+      font-size: 11px;
+    }
   }
 
   #price {
